@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{79B67177
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F861BF38-8E00-47E8-B292-632EC1A47F27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taxually.TechnicalTest.UnitTests", "Taxually.TechnicalTest.UnitTests\Taxually.TechnicalTest.UnitTests.csproj", "{D6011471-86C4-4D3A-81DA-89F0911B9098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taxually.TechnicalTest.UnitTests", "Taxually.TechnicalTest.UnitTests\Taxually.TechnicalTest.UnitTests.csproj", "{D6011471-86C4-4D3A-81DA-89F0911B9098}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +42,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{A119A885-BCD4-473B-861A-480AA3C87EB6} = {F861BF38-8E00-47E8-B292-632EC1A47F27}
+		{FF46E835-C860-403E-B91E-7C6C535460E0} = {F861BF38-8E00-47E8-B292-632EC1A47F27}
+		{A8982389-E0A2-4C5F-92C3-6240E6059C96} = {F861BF38-8E00-47E8-B292-632EC1A47F27}
 		{D6011471-86C4-4D3A-81DA-89F0911B9098} = {79B67177-12A9-44BF-8C81-1201B200B7D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
