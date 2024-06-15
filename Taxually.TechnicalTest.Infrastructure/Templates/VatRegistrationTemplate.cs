@@ -9,5 +9,6 @@ public abstract class VatRegistrationTemplate
     }
 
     protected abstract object PrepareData(VatRegistrationRequest request);
+
     protected abstract Task SendDataAsync(object data);
 }

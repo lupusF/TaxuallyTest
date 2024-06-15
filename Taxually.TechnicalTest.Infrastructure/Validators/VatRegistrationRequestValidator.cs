@@ -3,6 +3,7 @@
 public class VatRegistrationRequestValidator : AbstractValidator<VatRegistrationRequest>
 {
     private readonly VatRegistrationOptions _config;
+
     public VatRegistrationRequestValidator(IOptions<VatRegistrationOptions> config)
     {
         _config = config.Value;

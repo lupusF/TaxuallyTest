@@ -6,16 +6,18 @@ public class VatRegistrationController : ControllerBase
 {
     private readonly IVatRegistrationService _vatRegistrationService;
     private readonly IValidator<VatRegistrationRequest> _vatRegistrationRequestValidator;
+
     public VatRegistrationController(IVatRegistrationService vatRegistrationService, IValidator<VatRegistrationRequest> vatRegistrationRequestValidator)
     {
         _vatRegistrationService = vatRegistrationService;
         _vatRegistrationRequestValidator = vatRegistrationRequestValidator;
     }
+
     /// <summary>
     /// Registers a company for a VAT number in a given country
     /// </summary>
     [HttpPost]
-    public async Task<ActionResult> Post([FromBody] VatRegistrationRequest request)
+    public async Task<ActionResult> RegisterVAT([FromBody] VatRegistrationRequest request)
     {
         var validationResult = _vatRegistrationRequestValidator.Validate(request);
         if (!validationResult.IsValid)

@@ -1,7 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-
-
 builder.Services.AddScoped<IValidator<VatRegistrationRequest>, VatRegistrationRequestValidator>();
 builder.Services.AddHttpClient<TaxuallyHttpClient>();
 builder.Services.AddTransient<TaxuallyQueueClient>();
@@ -11,6 +9,7 @@ builder.Services.AddScoped<CsvVatRegistration>();
 builder.Services.AddScoped<XmlVatRegistration>();
 
 builder.Services.Configure<VatRegistrationOptions>(builder.Configuration.GetSection("VatRegistrationOptions"));
+builder.Services.Configure<ApiUrlConfig>(builder.Configuration.GetSection("ApiUrlConfig"));
 builder.Services.AddScoped<IVatRegistrationService, VatRegistrationService>(provider =>
 {
     var options = provider.GetRequiredService<IOptions<VatRegistrationOptions>>().Value;
@@ -28,7 +27,7 @@ builder.Services.AddScoped<IVatRegistrationService, VatRegistrationService>(prov
             }
         }
     }
-    
+
     return new VatRegistrationService(strategies);
 });
 
